@@ -42,8 +42,6 @@ public class Main {
                 firstword = words[i]; // defining positions
                 nextword = words[i + 1];
 
-                System.out.println(firstword + nextword);
-
                 if (!table1.containsKey(firstword)) {
                     wc = new wordcount(firstword, nextword);
                     table1.put(firstword, wc);

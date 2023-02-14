@@ -23,7 +23,7 @@ public class Main {
         String name = "Ong Wee Chuan";
         String email = "mr.ongwc@gmail.com";
         // opening a socket
-        Socket socket = new Socket(arrSplit[0], Integer.parseInt(arrSplit[1])); // host name + port number
+        Socket socket = new Socket(arrSplit[0], Integer.parseInt(arrSplit[1])); // hostname:port number
         String[] arr; // creating array
 
         try (OutputStream os = socket.getOutputStream()) { // preparing sending data out using socket to client.
