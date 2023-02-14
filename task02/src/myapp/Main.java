@@ -38,9 +38,12 @@ public class Main {
             // we can do our programming here.
 
             for (int i = 0; i < (words.length - 1); i++) { // while scanning for the words. minus to ignore the last
-                                                           // word
-                firstword = words[i];                       // defining positions
+                // word
+                firstword = words[i]; // defining positions
                 nextword = words[i + 1];
+
+                System.out.println(firstword + nextword);
+
                 if (!table1.containsKey(firstword)) {
                     wc = new wordcount(firstword, nextword);
                     table1.put(firstword, wc);
@@ -49,16 +52,16 @@ public class Main {
                     wc.evaluate(nextword);
                     table1.put(firstword, wc);
                 }
+
             }
 
         }
         Set<String> words = table1.keySet();
-        for (String w: words) {
+        for (String w : words) {
             wc = table1.get(w);
             System.out.println("key = " + w);
             wc.print();
         }
-        
 
         br.close();
         isr.close();

@@ -19,16 +19,11 @@ public class Main {
 
     public static void main(String[] args) throws UnknownHostException, IOException {
         String[] arrSplit = args[0].split(":");
-        // System.out.println("Sever " + arrSplit[0]);
-        // System.out.println("port is " + arrSplit[1]);
-
-        String host = arrSplit[0];
-        int port = Integer.parseInt(arrSplit[1]);
-
+        
         String name = "Ong Wee Chuan";
         String email = "mr.ongwc@gmail.com";
         // opening a socket
-        Socket socket = new Socket(host, port);
+        Socket socket = new Socket(arrSplit[0], Integer.parseInt(arrSplit[1])); // host name + port number
         String[] arr; // creating array
 
         try (OutputStream os = socket.getOutputStream()) { // preparing sending data out using socket to client.

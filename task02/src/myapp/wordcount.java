@@ -58,9 +58,10 @@ public class wordcount {
     public void print() {
         Set<String> words = wordFreq.keySet();
         for (String w: words) {
-            float prob = (wordFreq.get(w)/this.count);
-            String probf = String.valueOf(prob);
+            float prob = (float)(wordFreq.get(w))/(float)(this.count); //to recast into float and calculating float from here
+            String probf = String.valueOf(prob);    // change it to string
             System.out.println("   2nd word  " + w + "      probability = " + probf);
+
         }
     }
 }
